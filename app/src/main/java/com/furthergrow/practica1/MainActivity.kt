@@ -2,6 +2,7 @@ package com.furthergrow.practica1
 import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import com.furthergrow.practica1.databinding.ActivityMainBinding
 
 // Nos ayudan a enlazar elementos de la vista con el codigo
@@ -24,6 +25,16 @@ class MainActivity : Activity() {
 
         //Es lo mismo de arriba pero usando la variable binding ya no se usa var
         /*binding.text.text="UT SELVA"*/
+
+        binding.btnOk.setOnClickListener {
+            Toast.makeText(this,"Aceptar",Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnCancel.setOnClickListener {
+            Toast.makeText(this,"Adios",Toast.LENGTH_SHORT).show()
+            System.exit(0)
+
+        }
 
 
 
